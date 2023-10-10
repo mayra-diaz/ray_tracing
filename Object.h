@@ -9,6 +9,7 @@ using namespace std;
 class Object {
     public:
     vector3 color;
+    vector3 center{0,0,0};
     float kd; //constante difusa del material [0,1]
     float ks; //constante especular del material [0,1]
     float n; //shininess exponent

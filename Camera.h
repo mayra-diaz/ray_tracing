@@ -24,7 +24,7 @@ class Camera {
     CImg<BYTE> *pImg = nullptr;
     int max_depth=5;
 
-    get_lights(vector<Object*> objs, vector<Object*> lights);
+    void get_lights(vector<Object*> objs, vector<Object*>& lights);
 
 public:
     Camera() = default;
@@ -34,7 +34,7 @@ public:
 
     void render(vector<Object *> objects, string name = "x");
 
-    vector3 final_color(Ray rayo, vector<Object *> objects, Light* luz, int depth);
+    vector3 final_color(Ray rayo, vector<Object *> objects, vector<Object*>& luz, int depth);
 
     vector3 refract(vector3 &I, vector3 &N, float &ior);
 
